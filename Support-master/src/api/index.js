@@ -10,7 +10,7 @@ axios.defaults.headers.common.Authorization = token ? `Bearer ${token}` : "";
 
 const REGISTER_URL = `register`;
 const LOGIN_URL = `login`;
-const TABLE_URL = `table`;
+const TICKETS_URL = `tickets`;
 
 export async function register(request) {
 	return await axios.post(REGISTER_URL, request); 
@@ -18,9 +18,9 @@ export async function register(request) {
 export async function login(request) {
 	return await axios.post(LOGIN_URL, request); 
 }
-export async function table(request) {
+export async function tickets(request) {
 	return await axios({
-		url: TABLE_URL,
+		url: TICKETS_URL,
 		data: request,
 		method: `POST`,
 		headers: {

@@ -1,7 +1,9 @@
 <template>
   <v-card color="basil">
     <v-card-title class="text-center justify-center py-6">
-      <h1 class="font-weight-bold display-3 basil--text"></h1>
+      <h1 class="font-weight-bold display-3 basil--text">
+        Tickets
+      </h1>
     </v-card-title>
 
     <v-tabs
@@ -46,7 +48,7 @@
       return {
         tab: null,
         items: [
-          'My Ticket', 'View Ticket', 'Custom Response',
+          'View Ticket',
         ],
         text: 'Find and segregate the tickets you want easily with our filtering and search tools also you can write documentation and custom responses for common tickets.',
       }

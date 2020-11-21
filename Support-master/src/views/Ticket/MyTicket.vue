@@ -1,8 +1,8 @@
 <template>
   <div>
     <v-content>
-      <Header></Header>
-      <Table></Table>
+      <Header2></Header2>
+      <Tickets></Tickets>
       </v-content>
     <contact></contact>
   <!-- <v-footer 
@@ -22,13 +22,13 @@
 
 <script>
   // import Contact from '@/components/home/Contact.vue'
-  import Table from '@/views/Ticket/Tickettools/Table.vue'
-  import Header from '@/views/Usertools/Header.vue'
+  import Tickets from '@/views/Ticket/Tickettools/Tickets.vue'
+  import Header2 from '@/views/Usertools/Header2.vue'
   export default {
     props: {
       source: String,
     },
-    components : {Table, Header},
+    components : {Tickets, Header2},
     data: () => ({
       // dialoglogout: false,
       // drawer: null,

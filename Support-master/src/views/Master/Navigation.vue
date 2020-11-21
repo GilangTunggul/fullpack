@@ -163,11 +163,11 @@
             </v-list-item-avatar>
 
             <v-list-item-content>
-              <v-list-item-title>Admin</v-list-item-title>
+              <v-list-item-title>User</v-list-item-title>
               <!-- <v-list-item-subtitle>Mahasiwa</v-list-item-subtitle> -->
             </v-list-item-content>
 
-            <v-list-item-action>
+<!--             <v-list-item-action>
               <v-btn
                 :class="fav ? 'red--text' : ''"
                 icon
@@ -175,7 +175,7 @@
               >
                 <v-icon>mdi-heart</v-icon>
               </v-btn>
-            </v-list-item-action>
+            </v-list-item-action> -->
 
             <template>
             <v-btn 
@@ -292,21 +292,21 @@
             { icon: 'mdi-ticket-confirmation', text: 'View Ticket', name: 'AllTicket' },
           ],
         },
-        {
-          icon: 'mdi-chevron-up',
-          'icon-alt': 'mdi-chevron-down',
-          text: 'More',
-          model: false,
-          children: [
-            { text: 'Import' },
-            { text: 'Export' },
-            { text: 'Print' },
-            { text: 'Undo changes' },
-            { text: 'Other contacts' },
-          ],
-        },
+        // {
+        //   icon: 'mdi-chevron-up',
+        //   'icon-alt': 'mdi-chevron-down',
+        //   text: 'More',
+        //   model: false,
+        //   children: [
+        //     { text: 'Import' },
+        //     { text: 'Export' },
+        //     { text: 'Print' },
+        //     { text: 'Undo changes' },
+        //     { text: 'Other contacts' },
+        //   ],
+        // },
         // { icon: 'mdi-history', text: 'History' },
-        { icon: 'mdi-message', text: 'Article', name: 'Article' },
+        { icon: 'mdi-message', text: 'About Us', name: 'Article' },
         { icon: 'mdi-cog', text: 'Settings', name: 'Settings' },
         { icon: 'mdi-map-marker', text: 'Maps', name: 'Maps' },
         { icon: 'mdi-help', text: 'Help' },
