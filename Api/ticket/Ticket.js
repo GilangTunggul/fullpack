@@ -9,15 +9,15 @@ const TicketSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  division: {
-    type: String,
-    required: true
-  },
   description: {
     type: String,
     required: true
   },
   priority: {
+    type: String,
+    required: true
+  },
+    division: {
     type: String,
     required: true
   },

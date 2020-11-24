@@ -11,6 +11,7 @@ axios.defaults.headers.common.Authorization = token ? `Bearer ${token}` : "";
 const REGISTER_URL = `register`;
 const LOGIN_URL = `login`;
 const TICKETS_URL = `tickets`;
+const LOGINS_URL = `logins`;
 
 export async function register(request) {
 	return await axios.post(REGISTER_URL, request); 
@@ -27,4 +28,7 @@ export async function tickets(request) {
 			Authorization: `Bearer ${token}`
 		}
 	}); 
+}
+export async function logins(request) {
+	return await axios.post(LOGINS_URL, request); 
 }

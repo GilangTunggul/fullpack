@@ -247,6 +247,7 @@
 </template>
 
 <script>
+  import {getCookie, eraseCookie} from '@/helpers/cookie.js';
   export default {
     name : "NavigationAdmin",
     props: {
@@ -274,11 +275,16 @@
     }),
     methods: {
       logout() {
-          this.$router.push("/Admin");
+        eraseCookie("token");
+        setTimeout(()=> {
+          if(!getCookie("token")) {
+            this.$router.push("/logins");
+          }
+        }, 500);
       },
       goToPage(name){
         this.$router.push({name: name});
-      }
+      },
     }
   }
 </script>

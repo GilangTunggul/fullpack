@@ -69,12 +69,21 @@ const routes = [
         ]
     },
     {
-        path: '/admin',
-        name: 'Admin',
+        path: '/page',
+        name: 'Page',
         meta: {
             public: true,
         },  
-        component: () => import('@/views/Admin/Admin.vue'),
+        component: () => import('@/views/page.vue'),
+    },
+    {
+        path: '/logins',
+        name: 'Logins',
+        meta: {
+            public: true,
+        },  
+        component: () => import('@/views/Admin/Logins.vue'),
+        children: []
     },
     {
         path:'/',
@@ -85,57 +94,36 @@ const routes = [
             {
                 path: '/adminhome',
                 name: 'AdminHome',
-                meta: {
-                    public: true,
-                },  
                 component: () => import('@/views/Admin/AdminHome.vue'),
             },
             {
                 path: '/calendar',
                 name: 'Calendar',
-                meta: {
-                    public: true,
-                },  
                 component: () => import('@/views/Admin/Calendar.vue'),
             },
             {
                 path: '/reminders',
-                name: 'Reminders',
-                meta: {
-                    public: true,
-                },  
+                name: 'Reminders', 
                 component: () => import('@/views/Admin/Reminders.vue'),
             },
             {
                 path: '/tableadmin',
                 name: 'TableAdmin',
-                meta: {
-                    public: true,
-                },  
                 component: () => import('@/views/Admin/TableAdmin.vue'),
             },
             {
                 path: '/tableadminview',
                 name: 'TableAdminView',
-                meta: {
-                    public: true,
-                },  
                 component: () => import('@/views/Admin/TableAdminView.vue'),
             },
             {
                 path: '/notification',
                 name: 'Notification',
-                meta: {
-                    public: true,
-                },  
                 component: () => import('@/views/Admin/Notification.vue'),
             },
                                     {
                 path: '/setting',
                 name: 'Setting',
-                meta: {
-                    public: true,
-                },  
                 component: () => import('@/views/Admin/Setting.vue'),
             },
         ]
