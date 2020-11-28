@@ -64,7 +64,17 @@
       Login
     </v-btn>
       <v-btn color="success" to="register">Register</v-btn>
-      <v-btn color="Pink" to="logins">Admin</v-btn>
+      <v-tooltip right>
+      <template v-slot:activator="{ on, attrs }">
+      <v-btn 
+      color="Pink" 
+      to="logins" 
+      v-bind="attrs"
+      v-on="on">Admin</v-btn>
+      </template>
+      <span>
+login as admin</span>
+    </v-tooltip>
     </v-card-actions>
     </v-card>
   </v-hover>
