@@ -64,6 +64,7 @@
       Login
     </v-btn>
       <v-btn color="success" to="register">Register</v-btn>
+      <v-btn color="Pink" to="logins">Admin</v-btn>
     </v-card-actions>
     </v-card>
   </v-hover>
