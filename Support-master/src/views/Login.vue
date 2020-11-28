@@ -134,17 +134,14 @@ export default {
       };
       loginAsUser(request)
         .then((response)=> {
-            console.log(response);
-          if(response.status == 200 ) {
-            if (response.data) { 
+          if(response.status == 200 && response.data.token) {
               setCookie("token_user", response.data.token);
               this.$router.push({
-              name: 'home'  
-            })
-            }
+                name: 'home'  
+              })
           }
           else {
-          // handle warning, dll
+            console.error("nggak ada token")
           }
         })
         .catch(error => {
@@ -152,6 +149,7 @@ export default {
           base.snackbar= true;
       })
     },
+
     validate () {
         if (this.$refs.form.validate()) {
           this.snackbar = true

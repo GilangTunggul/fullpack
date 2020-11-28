@@ -3,8 +3,8 @@ import { getCookie } from '@/helpers/cookie.js';
 const NavigationGuard = function (Router) {
 
 	Router.beforeEach((to, from, next)=> {
-		let hasUserToken = getCookie("token_user");
-		let hasAdminToken = getCookie("token_admin")
+		const hasUserToken = !!getCookie("token_user");
+		const hasAdminToken = !!getCookie("token_admin");
 		if (hasUserToken) {
 			next()
 			// handle user		
