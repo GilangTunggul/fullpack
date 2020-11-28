@@ -67,7 +67,7 @@
       <v-tooltip right>
       <template v-slot:activator="{ on, attrs }">
       <v-btn 
-      color="Pink" 
+      color=" Success" 
       to="logins" 
       v-bind="attrs"
       v-on="on">Admin</v-btn>
@@ -98,7 +98,7 @@ login as admin</span>
   </v-parallax>
 </template>
 <script>
-import { login } from '@api/user';
+import { login } from '@api/user.js';
 import { setCookie } from '@/helpers/cookie'
 export default {
   name: 'Login',
@@ -134,7 +134,7 @@ export default {
         "email": this.email,
         "password": this.password
       };
-      login(request )
+      login(request)
         .then((response)=> {
             console.log(response);
           if(response.status == 200 ) {

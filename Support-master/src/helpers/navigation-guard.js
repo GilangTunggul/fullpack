@@ -6,14 +6,12 @@ const NavigationGuard = function (Router) {
 		let hasUserToken = getCookie("token_user");
 		let hasAdminToken = getCookie("token_admin")
 		if (hasUserToken) {
-			next({ path: '/home' })
-			// handle user
-			
+			next()
+			// handle user		
 		}
 		else if (hasAdminToken) {
-			next({ path: 'admin/adminhome' })
+			next()
 			// handle admin
-			
 		}
 		else {
 			if (to.meta.public){

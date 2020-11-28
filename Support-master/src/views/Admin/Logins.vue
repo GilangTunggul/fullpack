@@ -86,7 +86,7 @@
 </v-parallax>
 </template>
 <script>
-import { logins } from '@api/admin';
+import { logins } from '@api/admin.js';
 import { setCookie } from '@/helpers/cookie'
   export default {
     name: 'Logins',
