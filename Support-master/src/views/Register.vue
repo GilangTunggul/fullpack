@@ -109,7 +109,7 @@
 </v-parallax>
 </template>
 <script>
-import { register } from '@api';
+import { register } from '@api/user';
 export default {
   name: 'Register',
   components: {

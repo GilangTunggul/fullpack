@@ -22,8 +22,8 @@
 
 <script>
   // import Contact from '@/components/home/Contact.vue'
+    import Header2 from '@/views/Usertools/Header2.vue'
   import Tickets from '@/views/Ticket/Tickettools/Tickets.vue'
-  import Header2 from '@/views/Usertools/Header2.vue'
   export default {
     props: {
       source: String,

@@ -1,38 +1,29 @@
-import { getCookie,} from '@/helpers/cookie.js';
+import { getCookie } from '@/helpers/cookie.js';
 
 const NavigationGuard = function (Router) {
 
 	Router.beforeEach((to, from, next)=> {
-		let hasToken = getCookie("token");
-		if (hasToken) {
-			if (to.meta.public){
-				next("/home")
-			}else {
-				next()
-			}
+		let hasUserToken = getCookie("token_user");
+		let hasAdminToken = getCookie("token_admin")
+		if (hasUserToken) {
+			next ("/home")
+			// handle user
+			
+		}
+		else if (hasAdminToken) {
+			next ("/admin/adminhome")
+			// handle admin
+			
 		}
 		else {
 			if (to.meta.public){
 				next()
-			}else {
+			}
+			else {
 				next("/login")
-			}
-		}
-	});
-	Router.beforeEach((to, from, next)=> {
-		let hasToken = getCookie("token");
-		if (hasToken) {
-			if (to.meta.public){
-				next("/adminhome")
-			}else {
-				next()
-			}
-		}
-		else {
-			if (to.meta.public){
-				next()
-			}else {
-				next("/logins")
+				// kasih link di halaman login user
+				// are you an admin?
+				// if so, click here to log in as administrator
 			}
 		}
 	});

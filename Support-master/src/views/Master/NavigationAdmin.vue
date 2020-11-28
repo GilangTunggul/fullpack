@@ -275,9 +275,9 @@
     }),
     methods: {
       logout() {
-        eraseCookie("token");
+        eraseCookie("token_admin");
         setTimeout(()=> {
-          if(!getCookie("token")) {
+          if(!getCookie("token_admin")) {
             this.$router.push("/logins");
           }
         }, 500);
