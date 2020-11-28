@@ -23,7 +23,7 @@ const NavigationGuard = function (Router) {
 				next("/login")
 				// kasih link di halaman login user
 				// are you an admin?
-				// if so, click here to log in as administrator
+				// if so, click here to log in as
 			}
 		}
 	});
