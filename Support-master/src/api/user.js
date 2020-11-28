@@ -16,7 +16,7 @@ const requestBody = {
     data: {}
 }; // kerangkaaa
 
-export async function loginAsAdministrator(request={}) {
+export async function loginAsUser(request={}) {
 	return await axios({...requestBody, ...{
         method: "post",
         url: "/login",

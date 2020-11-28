@@ -86,7 +86,7 @@
 </v-parallax>
 </template>
 <script>
-import { logins } from '@api/admin.js';
+import { loginAsAdmin } from '@api/admin.js';
 import { setCookie } from '@/helpers/cookie'
   export default {
     name: 'Logins',
@@ -114,7 +114,7 @@ import { setCookie } from '@/helpers/cookie'
         "email": this.email,
         "password": this.password
       };
-      logins(request )
+      loginAsAdmin(request )
         .then((response)=> {
             console.log(response);
           if(response.status == 200 ) {

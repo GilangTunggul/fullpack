@@ -4,7 +4,6 @@
     height="700"
     src="@/views/Image/bk1.jpg"
   >
-  <v-hover v-slot:default="{ hover }">
     <v-card width="400" class="mx-auto mt-5" color="amber lighten-1">
 
       <v-card-title class="text-center justify-center py-6">
@@ -77,7 +76,6 @@ login as admin</span>
     </v-tooltip>
     </v-card-actions>
     </v-card>
-  </v-hover>
 
     <v-snackbar
       v-model="snackbar"
@@ -98,7 +96,7 @@ login as admin</span>
   </v-parallax>
 </template>
 <script>
-import { login } from '@api/user.js';
+import { loginAsUser } from '@api/user.js';
 import { setCookie } from '@/helpers/cookie'
 export default {
   name: 'Login',
@@ -134,7 +132,7 @@ export default {
         "email": this.email,
         "password": this.password
       };
-      login(request)
+      loginAsUser(request)
         .then((response)=> {
             console.log(response);
           if(response.status == 200 ) {
