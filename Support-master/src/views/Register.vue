@@ -109,7 +109,7 @@
 </v-parallax>
 </template>
 <script>
-import { register } from '@api/user';
+import { registerAsAdministrator } from '@api/user.js';
 export default {
   name: 'Register',
   components: {
@@ -157,7 +157,7 @@ export default {
       "gender" : this.form.gender,
       "password" : this.form.password
     }  
-    register(request)
+    registerAsAdministrator(request)
       .then((response)=> {
           if(response.status == 200 ) {
             console.log(response.data)

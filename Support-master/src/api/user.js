@@ -24,7 +24,7 @@ export async function loginAsUser(request={}) {
     }}); 
 }
 
-export async function RegisterAsAdministrator(request={}) {
+export async function registerAsAdministrator(request={}) {
 	return await axios({...requestBody, ...{
         method: "post",
         url: "/register",

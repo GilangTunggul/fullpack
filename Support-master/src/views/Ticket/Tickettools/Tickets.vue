@@ -465,7 +465,7 @@
   </v-data-table>
 </template>
 <script>
-  import { tickets } from '@api/user';
+  import { getTickets } from '@api/user.js';
   export default {
     name: 'Tickets',
     data () {
@@ -608,7 +608,7 @@
     }  
 
     console.log("masuk");
-    tickets(request)
+    getTickets(request)
       .then((response)=> {
           if(response.status == 200 ){
             console.log(response.data)
