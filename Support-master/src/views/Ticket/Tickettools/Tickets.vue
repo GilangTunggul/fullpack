@@ -465,7 +465,7 @@
   </v-data-table>
 </template>
 <script>
-  import { tickets } from '@api';
+  import { tickets } from '@api/user';
   export default {
     name: 'Tickets',
     data () {

@@ -86,7 +86,7 @@
 </v-parallax>
 </template>
 <script>
-import { logins } from '@api';
+import { logins } from '@api/admin';
 import { setCookie } from '@/helpers/cookie'
   export default {
     name: 'Logins',
@@ -119,7 +119,7 @@ import { setCookie } from '@/helpers/cookie'
             console.log(response);
           if(response.status == 200 ) {
             if (response.data) { 
-              setCookie("token", response.data.token);
+              setCookie("token_admin", response.data.token);
               this.$router.push({
               name: 'adminhome'  
             })
