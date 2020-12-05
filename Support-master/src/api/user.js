@@ -38,3 +38,10 @@ export async function getTickets() {
         url: "/ticket/tickettools/tickets",
     }})
 }
+
+export async function postTickets() {
+    return await axios({...requestBody, ...{
+        method: "post",
+        url: "/ticket/tickettools/tickets",
+    }})
+}

@@ -434,7 +434,7 @@
         :loading="isUpdating"
         color="blue-grey darken-3"
         depressed
-        @click="saveNewTicket(save = true)"
+        @click="saveNewTicket(save=true)"
       >
         <v-icon left>mdi-update</v-icon>
         Update Now
@@ -466,6 +466,7 @@
 </template>
 <script>
   import { getTickets } from '@api/user.js';
+  //import { postTickets } from '@api/user.js';
   export default {
     name: 'Tickets',
     data () {
@@ -721,7 +722,7 @@
         }, 300)
       },
 
-      save () {
+      save() {
         if (this.editedIndex > -1) {
           Object.assign(this.tickets[this.editedIndex], this.editedItem)
         } else {

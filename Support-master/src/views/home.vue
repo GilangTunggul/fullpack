@@ -266,7 +266,7 @@
             <div class="black--text mb-2 display-1 text-center">
               <h2 class="headline">The best way to start Ticketing</h2>
               <span class="subheading">
-                Easy to use to develop
+                Easy to use for develop
               </span>
             </div>
           </v-flex>

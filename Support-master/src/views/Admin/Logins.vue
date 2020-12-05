@@ -38,11 +38,13 @@
           ></v-text-field>
           <v-text-field
             v-model="password"
+            :append-icon="passwordd ? 'mdi-eye' : 'mdi-eye-off'"
             :rules="[rules.required, rules.min]"
             label="Password"
             :type="passwordd ? 'text' : 'password'"
             name="input-10-2"
             hint="At least 8 characters"
+            @click:append="passwordd = !passwordd"
             filled
             required
           ></v-text-field>

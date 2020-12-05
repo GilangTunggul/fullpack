@@ -141,7 +141,7 @@ export default {
               })
           }
           else {
-            console.error("nggak ada token")
+            console.error("tidak ada token")
           }
         })
         .catch(error => {
